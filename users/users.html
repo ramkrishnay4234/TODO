@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div style="display: flex; justify-content: space-between;">
+            <h2><span id="sheetName"></span></h2>
+            <div><button id="logout" class="btn btn-sm btn-danger" style="padding: 5px;">Logout</button></div>
+        </div><br>  
+        <table class="table table-bordered" id="userDataTable" style="width: 100%; overflow-x: auto;">
+            <thead>
+                <tr style="background-color: rgba(200, 200, 200, 0.5);">
+                    <th>S.N</th>
+                    <th>Heading</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script/script.js"></script>
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            history.replaceState(null, '', location.pathname);
+            window.location.href = '../index.html';
+        });
+    </script>
+</body>
+
+</html>
